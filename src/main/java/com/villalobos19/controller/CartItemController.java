@@ -29,7 +29,7 @@ public class CartItemController {
 		this.cartItemService=cartItemService;
 		this.userService=userService;
 	}
-	
+	  // este codigo contola las peticiones  hacia  "/api/cart_items/{cartItemId}"*** //
 	@DeleteMapping("/{cartItemId}")
 	public ResponseEntity<ApiResponse>deleteCartItemHandler(@PathVariable Long cartItemId, @RequestHeader("Authorization")String jwt) throws CartItemException, UserException{
 		
@@ -40,6 +40,10 @@ public class CartItemController {
 		
 		return new ResponseEntity<ApiResponse>(res,HttpStatus.ACCEPTED);
 	}
+
+
+
+	//  Este es parte controla las peticiones  hacia   metodo PUT "/api/cart_items/{cartItemId}"
 	
 	@PutMapping("/{cartItemId}")
 	public ResponseEntity<CartItem>updateCartItemHandler(@PathVariable Long cartItemId, @RequestBody CartItem cartItem, @RequestHeader("Authorization")String jwt) throws CartItemException, UserException{

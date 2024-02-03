@@ -31,7 +31,7 @@ public class OrderController {
 		this.orderService=orderService;
 		this.userService=userService;
 	}
-	
+	// parte  controla peticiones  hacia las peticiones POST a:  "/api/orders/"
 	@PostMapping("/")
 	public ResponseEntity<Order> createOrderHandler(@RequestBody Address spippingAddress,
 			@RequestHeader("Authorization")String jwt) throws UserException{
@@ -42,7 +42,9 @@ public class OrderController {
 		return new ResponseEntity<Order>(order,HttpStatus.OK);
 		
 	}
-	
+
+
+	// este codigo controla las peticones  hacia las petiiones GET a : "/api/orders/user"
 	@GetMapping("/user")
 	public ResponseEntity< List<Order>> usersOrderHistoryHandler(@RequestHeader("Authorization") 
 	String jwt) throws OrderException, UserException{
@@ -51,7 +53,10 @@ public class OrderController {
 		List<Order> orders=orderService.usersOrderHistory(user.getId());
 		return new ResponseEntity<>(orders,HttpStatus.ACCEPTED);
 	}
-	
+
+
+
+	// este codigo controla peticiones hacia  la peticion GET  a : "/api/orders/{orderId}"
 	@GetMapping("/{orderId}")
 	public ResponseEntity< Order> findOrderHandler(@PathVariable Long orderId, @RequestHeader("Authorization") 
 	String jwt) throws OrderException, UserException{

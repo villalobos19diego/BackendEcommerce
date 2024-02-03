@@ -40,7 +40,7 @@ public class PaymentController {
 		this.userService=userService;
 		this.orderRepository=orderRepository;
 	}
-	
+	// este  codigo controla las peticiones hacia  la peticion POST a : "/api/payments/{orderId}"
 	@PostMapping("/payments/{orderId}")
 	public ResponseEntity<PaymentLinkResponse>createPaymentLink(@PathVariable Long orderId,
 			@RequestHeader("Authorization")String jwt) 

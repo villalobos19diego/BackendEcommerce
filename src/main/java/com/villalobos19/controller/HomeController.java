@@ -9,6 +9,8 @@ import com.villalobos19.response.ApiResponse;
 
 @RestController
 public class HomeController {
+	//classe que conrola peticiones GET  hacia "http://localhost:8080/"
+	// la cual debe imprimir un welcome si el  login es  exitoso  debe de  mostrar  el mensaje
 
 	@GetMapping("/")
 	public ResponseEntity<ApiResponse> homeController(){

@@ -73,7 +73,11 @@ public class AdminProductController {
 		
 		return new ResponseEntity<Product>(updatedProduct,HttpStatus.OK);
 	}
-	
+
+
+
+	// Este metodo es para manejar las peticiones POST  la ruta"/api/admin/products/creates/"
+
 	@PostMapping("/creates")
 	public ResponseEntity<ApiResponse> createMultipleProduct(@RequestBody CreateProductRequest[] reqs) throws ProductException{
 		

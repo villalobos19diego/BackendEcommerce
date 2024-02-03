@@ -24,6 +24,12 @@ import com.villalobos19.service.CustomUserDetails;
 
 import jakarta.validation.Valid;
 
+
+
+// este controlador maneja las operaciones de registro (/auth/signup) y
+// inicio de sesión (/auth/signin). Utiliza JWT para la autenticación y
+// un servicio de usuario personalizado para cargar detalles del usuario
+// También incluye la creación de un carrito de compras asociado al usuario durante el registro
 @RestController
 @RequestMapping("/auth")
 public class AuthController {

@@ -21,7 +21,10 @@ import com.villalobos19.service.UserService;
 @RestController
 @RequestMapping("/api/cart")
 public class CartController {
-	
+
+
+
+	// este  clase es la controla cada peticion asi al carrito...
 	private CartService cartService;
 	private UserService userService;
 	
@@ -29,7 +32,10 @@ public class CartController {
 		this.cartService=cartService;
 		this.userService=userService;
 	}
-	
+
+
+
+	//*** Esta codigo controla el codigo hacia las peticiones  GET   "/api/cart/" ****//
 	@GetMapping("/")
 	public ResponseEntity<Cart> findUserCartHandler(@RequestHeader("Authorization") String jwt) throws UserException{
 		
@@ -41,6 +47,8 @@ public class CartController {
 		
 		return new ResponseEntity<Cart>(cart,HttpStatus.OK);
 	}
+
+	//*** Este  codigo  controlas peticiones PUT "/api/cart/add"***//
 	
 	@PutMapping("/add")
 	public ResponseEntity<ApiResponse> addItemToCart(@RequestBody AddItemRequest req, @RequestHeader("Authorization") String jwt) throws UserException, ProductException{
