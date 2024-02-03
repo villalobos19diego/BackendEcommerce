@@ -13,7 +13,8 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.NoHandlerFoundException;
 
-
+// clase  que tiene objeico de manejar las clases  nivel global  tanto expciones de  login,
+// signup , detalles , cart,  payments  etc
 
 
 @ControllerAdvice

@@ -1,6 +1,7 @@
 package com.villalobos19.exception;
 
 import java.time.LocalDateTime;
+// clase para manejar cada excepcion de cada de detalle del producto
 
 public class ErrorDetails {
 	
