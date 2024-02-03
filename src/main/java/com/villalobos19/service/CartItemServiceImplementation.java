@@ -13,6 +13,12 @@ import com.villalobos19.modal.User;
 import com.villalobos19.repository.CartItemRepository;
 import com.villalobos19.repository.CartRepository;
 
+
+
+
+// esta  clase verifica el crud se ejecute con normalidad carrito, como crear, actualizar, verificar la existencia, eliminar y buscar elementos de carrito.
+// Además, incluye manejo de excepciones
+// para casos en los que un elemento de carrito no se encuentre o cuando se intenta realizar operaciones en elementos de carrito pertenecientes a otro usuario
 @Service
 public class CartItemServiceImplementation implements CartItemService {
 	

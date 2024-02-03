@@ -1,5 +1,10 @@
 package com.villalobos19.response;
 
+
+
+// est  clase proporciona una forma estructurada de enviar información sobre
+// el resultado de una operación en tu API,
+// incluyendo un mensaje descriptivo y un indicador de estado.
 public class ApiResponse {
 
 	private String message;

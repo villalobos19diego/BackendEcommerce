@@ -1,5 +1,9 @@
 package com.villalobos19.response;
 
+
+// Esta clase   proporciona una forma estructurada de
+// enviar información sobre el resultado de una operación de generación de enlace de pago,
+// incluyendo la URL del enlace y su identificador único.
 public class PaymentLinkResponse {
 	
 	private String payment_link_url;

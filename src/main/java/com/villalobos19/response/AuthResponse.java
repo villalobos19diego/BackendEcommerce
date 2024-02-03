@@ -1,5 +1,10 @@
 package com.villalobos19.response;
 
+
+
+//  Esta  clase proporciona proporciona una forma estructurada de
+//  enviar información sobre el resultado de una operación de autenticación,
+//  incluyendo un token JWT y un indicador de estado.
 public class AuthResponse {
 	
 	private String jwt;
